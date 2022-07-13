@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "config": "^3.3.7",
+    "fastify": "^4.2.1",
+    "mongoose": "^6.4.4"
+  },
+  "devDependencies": {
+    "@types/config": "^0.0.41",
+    "nodemon": "^2.0.19",
+    "ts-node": "^10.8.2"
+  },
+  "scripts": {
+    "dev": "nodemon src/index.ts"
+  }
+}
