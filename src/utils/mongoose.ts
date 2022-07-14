@@ -1,12 +1,13 @@
 import mongoose, { Schema, model } from "mongoose";
-const connectionString = `mongodb+srv://psramirez:Mzej4vAiVSmwry57@cluster0.wwfwm.mongodb.net/fastify_test?retryWrites=true&w=majority`;
-
-mongoose.connect(connectionString)
+const connectionString = process.env.MONGODB_URI;
+if(typeof connectionString === 'string'){
+    mongoose.connect(connectionString)
     .then(()=> {
         console.log("mongodb connected");
     }).catch(err => {
         console.log(err);
     });
+}
 /*
 const productSchema = new Schema({
     title: String,

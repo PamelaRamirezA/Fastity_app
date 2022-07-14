@@ -1,5 +1,6 @@
 //import { route } from "./routes/products.routes";
 import Fastify from 'fastify';
+require('dotenv').config();
 import { productSchema } from './models/product.model';
 import config from 'config'
 const productRoutes = require("./routes/products.routes.ts");
